@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter Sample: 100</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: monospace;
+            background-color: #dbe2dd;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            background-color: #edf8f2;
+            border: 2px solid #333333;
+            padding: 40px;
+            width: 350px;
+            text-align: center;
+        }
+        .amount {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .prompt {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .image img {
+            width: 100%;
+            height: 100px;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+        .refresh-btn {
+            margin-top: 20px;
+            padding: 8px 15px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="image">
+        <img src="money.jpg" alt="Money">
+    </div> 
+
+    <h2>Currency Converter Sample</h2>
+    <p class="amount">100 pesos</p>
+    <p class="prompt">Convert in US or UK currency:</p>
+    <p id="display"></p>
+
+    <button type="button" onclick="var amount = 100; var pesoToDollar = 58.76; document.getElementById('display').innerHTML = (amount/pesoToDollar).toFixed(2) + ' USD';">
+        Convert to Dollars
+    </button>
+
+    <button type="button" onclick="var amount = 100; var pesoToEuro = 60.281; document.getElementById('display').innerHTML = (amount/pesoToEuro).toFixed(2) + ' EUR';">
+        Convert to Euros
+    </button>
+    <br>
+    <button class="refresh-btn" onclick="window.location.reload();">Refresh</button> 
+</div>
+
+</body>
+</html>
